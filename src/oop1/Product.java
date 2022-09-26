@@ -2,6 +2,19 @@ package oop1;
 
 //PascalCase (Class lar bu şekilde isimlendirilir)
 public class Product {
+
+    public Product(String name, double unitPrice, double discount, String imageUrl, int unitsInStock){
+        this.name = name;
+        this.discount = discount;
+        this.imageUrl = imageUrl;
+        this.unitPrice = unitPrice;
+        this.unitsInStock = unitsInStock;
+    }
+
+    public Product(){
+
+    }
+
     private String name;
     private double unitPrice;
     private double discount;

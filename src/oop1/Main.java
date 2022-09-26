@@ -1,7 +1,22 @@
 package oop1;
 
+import InheritanceDemo.AskerKredisi;
+import InheritanceDemo.BaseManager;
+import InheritanceDemo.KrediUI;
+import InheritanceDemo.TarimKredisi;
+import polimorphismCreditOfNeed.BaseKrediManager;
+import polimorphismCreditOfNeed.OgrenciKrediManager;
+import polimorphismCreditOfNeed.OgretmenKrediManager;
+import polimorphismCreditOfNeed.TarimKrediManager;
+import polimorphismDemo.*;
+import polimorphismExample.CustomerManager;
+import polimorphismExample.HuaweiLogger;
+
+import javax.swing.plaf.basic.BasicEditorPaneUI;
+
 public class Main {
     public static void main(String[] args) {
+/*
 
         Product product1 = new Product();
         product1.setName("Delongi Kahve Makinesi");
@@ -48,6 +63,35 @@ public class Main {
         corporateCustomer.setTaxNumber("000112233");
 
         Customer[] customers = {individualCustomer,corporateCustomer};
+
+ */
+
+
+/*
+        KrediUI krediUI = new KrediUI();
+        krediUI.KrediHesapla(new TarimKredisi());
+        
+ */
+
+        /*
+        BaseLogger[] loggers = new BaseLogger[]{new DataBaseLogger(), new FileLogger(), new EmailLogger()};
+        for (BaseLogger logger: loggers) {
+            logger.Log("Log mesajı");
+        }
+        */
+
+//        LoggerUI loggerUI = new LoggerUI(new EmailLogger());
+//        loggerUI.add();
+
+//        CustomerManager customerManager = new CustomerManager(new HuaweiLogger());
+//        customerManager.add();
+
+        BaseKrediManager[] krediManagers = new BaseKrediManager[]{new OgretmenKrediManager(), new OgrenciKrediManager(), new TarimKrediManager()};
+
+        for (BaseKrediManager krediManager : krediManagers){
+            System.out.println(krediManager.hesapla(124000));
+        }
+
 
     }
 }
