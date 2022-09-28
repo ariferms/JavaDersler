@@ -4,6 +4,18 @@ import InheritanceDemo.AskerKredisi;
 import InheritanceDemo.BaseManager;
 import InheritanceDemo.KrediUI;
 import InheritanceDemo.TarimKredisi;
+import InterfaceExample.IWorkable;
+import InterfaceExample.OutSourceWorker;
+import InterfaceExample.Robot;
+import InterfaceExample.Worker;
+import abstractClasses.GameCalculater;
+import abstractClasses.KidsCalculater;
+import abstractClasses.ManCalculater;
+import abstractClasses.WomanCalculater;
+import abstractDemo.CustomerManager1;
+import interfaces.ICustomerDal;
+import interfaces.MySqlCustomerDal;
+import interfaces.OracleCustomerDal;
 import polimorphismCreditOfNeed.BaseKrediManager;
 import polimorphismCreditOfNeed.OgrenciKrediManager;
 import polimorphismCreditOfNeed.OgretmenKrediManager;
@@ -11,6 +23,9 @@ import polimorphismCreditOfNeed.TarimKrediManager;
 import polimorphismDemo.*;
 import polimorphismExample.CustomerManager;
 import polimorphismExample.HuaweiLogger;
+import staticDemo.Product;
+import staticDemo.ProductManager;
+import staticDemo.ProductValidator;
 
 import javax.swing.plaf.basic.BasicEditorPaneUI;
 
@@ -86,11 +101,37 @@ public class Main {
 //        CustomerManager customerManager = new CustomerManager(new HuaweiLogger());
 //        customerManager.add();
 
-        BaseKrediManager[] krediManagers = new BaseKrediManager[]{new OgretmenKrediManager(), new OgrenciKrediManager(), new TarimKrediManager()};
+        /*BaseKrediManager[] krediManagers = new BaseKrediManager[]{new OgretmenKrediManager(), new OgrenciKrediManager(), new TarimKrediManager()};
 
         for (BaseKrediManager krediManager : krediManagers){
             System.out.println(krediManager.hesapla(124000));
-        }
+        }*/
+
+        /*GameCalculater[] gameCalculaters = {new WomanCalculater(), new ManCalculater(), new KidsCalculater()};
+
+        for (GameCalculater gameCalculater : gameCalculaters){
+            gameCalculater.hesapla();
+        }*/
+
+        /*CustomerManager1 customerManager = new CustomerManager1();
+        customerManager.addData();*/
+
+        /*ICustomerDal customerDal;
+        customerDal = new MySqlCustomerDal();
+        customerDal.add();*/
+
+       /* Worker workable;
+        workable = new Worker();
+        workable.work();
+        workable.eat();
+        workable.pay();*/
+
+        ProductManager manager = new ProductManager();
+        Product product = new Product();
+        product.price = 10;
+        product.name = "Mouse";
+
+        manager.add(product);
 
 
     }
